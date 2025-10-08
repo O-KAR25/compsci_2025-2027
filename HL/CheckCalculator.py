@@ -1,13 +1,13 @@
 
 FullPrice = 10
 FoodPriceCalc1 = 0 
-FIL = ["Burger","hot Dog","chicken","kfc","Strips"]
+FIL_list = ["Burger","hot Dog","chicken","kfc","Strips"]
 Inp = "kfc"
 
 def FoodPrice(FoodInput): 
     continueation = False
     while continueation == False:
-        if FoodInput in FIL:
+        if FoodInput in FIL_list:
             continueation = True
         else:
             continueation = False
@@ -40,7 +40,7 @@ def eating(now):
         return Inp
 
     
-while Inp in FIL:
+while Inp in FIL_list:
         eating(input("wanna continue?"))
         
        

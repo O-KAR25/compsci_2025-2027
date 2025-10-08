@@ -10,7 +10,7 @@ print(type(number))
 print(type(decimal))
 print(type(word))
 print(type(is_sunny))
-
+print("joe")
 # Change the values to the type shown in the comment?
 age = 15      # Change to int
 score = "High"      # Change to str
