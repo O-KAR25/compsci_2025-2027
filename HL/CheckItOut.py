@@ -1,3 +1,5 @@
+#Variables
+
 Cycle = True
 Option_list = ["chicken", "oatmeal", "pizza", "hot dog"]
 pricetotal = 0
@@ -6,6 +8,9 @@ oatmealprice = 5
 pizzaprice = 20
 hotdogprice = 4
 maybe = True
+
+#Function for the prize
+
 def food(foodchosen):
     if foodchosen in Option_list:
         confirmation = input(f"You want {(foodchosen)}?")
@@ -22,13 +27,18 @@ def food(foodchosen):
             elif foodchosen == "chicken":
                 price = hotdogprice
                 return price
+            else:
+                print(f"Your final price to pay is {(pricetotal)}")
+                return "False"   
         else: 
              print(f"Your final price to pay is {(pricetotal)}")
              return "False"   
     else:
         foodchosen = input("Choose actual food that you have a choice to get")
 
-            
+#Function for continuation 
+
+
 def Reuse(maybe):
     if maybe == "yes":
         maybe = True
@@ -39,14 +49,15 @@ def Reuse(maybe):
         return maybe    
 
 
-
-
-
+#the loop
 
 while Cycle == True:
     
     Cont1 = food(input("What food you want?"))
+    if Cont1 == None:
+        Cont1 = 0
     pricetotal += Cont1
     Cont = Reuse(input("Do you wanna continue?"))
-    if Cont == Reuse(maybe=False) and Cont1 == food("False"):
+    if Cont == Reuse(maybe==False) or Cont1 == food("False"):
         Cycle = False
+        

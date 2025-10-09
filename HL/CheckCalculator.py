@@ -35,7 +35,7 @@ def eating(now):
     if now == "yes":
         FoodPrice (input("what else do you want to eat?"))
     else: 
-        print("Your total is " + FoodPriceCalc1 + " dollars my friend")
+        print("Your total is " + str(FoodPriceCalc1) + " dollars my friend")
         Inp = "BOOOOOOOMM"
         return Inp
 
