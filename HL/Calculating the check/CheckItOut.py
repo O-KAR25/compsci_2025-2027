@@ -59,5 +59,5 @@ while Cycle == True:
     pricetotal += int(Cont1)
     Cont = Reuse(input("Do you wanna continue?"))
     if Cont == Reuse(maybe==False) or Cont1 == food("False"):
-        Cycle = False
+        break
         
