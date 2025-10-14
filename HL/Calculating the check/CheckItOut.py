@@ -55,8 +55,8 @@ while Cycle == True:
     
     Cont1 = food(input("What food you want?"))
     if Cont1 == None:
-        Cont1 = 0
-    pricetotal += Cont1
+        Cont1 = int(0)
+    pricetotal += int(Cont1)
     Cont = Reuse(input("Do you wanna continue?"))
     if Cont == Reuse(maybe==False) or Cont1 == food("False"):
         Cycle = False
