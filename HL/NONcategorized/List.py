@@ -1,3 +1,7 @@
+import functools
+
+
+@functools.cache
 def Fibs(number):
     if number == 1:
         return 0
@@ -6,4 +10,5 @@ def Fibs(number):
     return Fibs(number - 1) + Fibs(number - 2)
     
 
-print(Fibs(int(input("What number do chu went? "))))
+print(Fibs(int(input())))
+print("{red}black people")
