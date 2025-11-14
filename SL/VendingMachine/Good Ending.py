@@ -38,13 +38,18 @@ def Dave():
     print(f"Nice job, you chose {Drink}! It had the symbols {Choice}") 
     print("How do you want to pay now, as in you have one choice but i'll give you an illusion of it. Do you want to pay with card or cash")
     Money = input()
-    while Money == "cash":
-        if Money == "cash":
-            print("Sorry, we are not taking cash currently. Please choose another way of payment. cash or card")
+    while Money != "card":
+        while Money == "cash":
+            if Money == "cash":
+                print("Sorry, we are not taking cash currently. Please choose another way of payment. cash or card")
+                Money = input()
+        if Money == "card":
+            print("good choice")
+        else:
+            print("that is not a possible choice, please choose either cash or card")
             Money = input()
-    if Money == "card":
-        print("good choice")
+
        
-    return "here is your drink " + Drink + "!"
+    return "here is your drink (" + Drink + ")!"
 
 print(Dave())
