@@ -110,5 +110,5 @@ def TheSortingHat():
     print("intense music starts playing")
     time.sleep(2)
     print( House + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
+    return(House)
 TheSortingHat()
