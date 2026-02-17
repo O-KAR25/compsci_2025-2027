@@ -11,9 +11,10 @@
 #   2) pi rounded to 3 decimal places
 
 # TODO: write your imports here
-
+import math
 # TODO: write your prints here
-
+print(math.sqrt(81))
+print(round(math.pi, 3))
 
 # ---------------------------------------------------------------------------
 # PART 2 – FROM ... IMPORT ...
@@ -28,10 +29,8 @@
 # TODO: write your imports here
 
 value = 50
-# TODO: compute root
-root = None
-# TODO: compute floored
-floored = None
+root = math.sqrt(50)
+floored = math.floor(root)
 
 print("sqrt(50) =", root)
 print("floor(sqrt(50)) =", floored)
@@ -47,9 +46,13 @@ print("floor(sqrt(50)) =", floored)
 # - Store the results in a list and print it
 
 # TODO: write your imports here
+import random as rnd
 
-rolls = []
+rolls = [ ]
 # TODO: add 10 random ints from 1 to 6
+for number in range(1,10):
+    dice = rnd.randint(1,6)
+    rolls.append(dice)
 
 print("Rolls:", rolls)
 
@@ -67,10 +70,10 @@ print("Rolls:", rolls)
 #   3) my_utils.clamp(200, 0, 100)
 
 # TODO: write your import here
-
-print("Shout:", None)   # TODO
-print("Is even:", None) # TODO
-print("Clamp:", None)   # TODO
+import my_utils
+print("Shout:", my_utils.shout("Hello"))   # TODO
+print("Is even:", my_utils.is_even(123)) # TODO
+print("Clamp:", my_utils.clamp(200,0,100))   # TODO
 
 
 # ---------------------------------------------------------------------------
@@ -82,8 +85,8 @@ print("Clamp:", None)   # TODO
 # - Why does that break `import random`?
 # - Write your answer as a multi-line string below:
 # - Below is an example of a multi-line string:
-answer = """
-TODO: write your explanation here.
+answer = """EVERYONE WILL DIE
+TODO: write your explanation here. NAHABAHAHAHBH
 """
 
 print(answer)
