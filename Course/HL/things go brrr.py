@@ -1,5 +1,5 @@
 class vehicle:
-    def __init__(self, name, speed = 0, booms):
+    def __init__(self, name, speed = 0, booms = str):
         self.name = name
         self.speed = speed
         self.booms = booms   
@@ -28,14 +28,20 @@ class vehicle:
     def __str__(self):
         return f"This f{self.name} goes brrrr at {self.speed}. It's chance of boom is {self.booms}"
     
-class car:
-    def __init__(self, wheel_count):
-        self.wheel_count = wheel_count
-    def engineSound():
-        print("BRRRRRRRR")
-    class SUV(car):
-        def __init__ (self, wheel_count, offroadness):
-            self.wheel_count = wheel_count
-            self.offroadness = offroadness
+    class car(vehicle):
+        def __init__(self, name, speed = 0, booms = str, wheelcount = 4):
+            self.name = name
+            self.speed = speed
+            self.booms = booms   
+            self.wheel_count = wheelcount
         def engineSound():
-            print("LOUDER BRRRRRRRRR")
+            print("BRRRRRRRR")
+            class SUV(car(vehicle)):
+            def __init__(self, name, speed = 0, booms = str, wheelcount = 4, offroadness = "YES"):
+                self.wheel_count = wheelcount
+                self.name = name
+                self.speed = speed
+                self.booms = booms   
+                self.offroadness = offroadness
+            def engineSound():
+                print("LOUDER BRRRRRRRRR")
